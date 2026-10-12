@@ -49,7 +49,7 @@ export const citizenTranslations = {
     step3Title: 'Displayed on Dashboard',
     step3Description:
       'Your report appears live on the municipal RoadWatch dashboard alongside bus fleet detections, visible to repair teams in real time.',
-    formTitle: 'Complaint Details',
+    formTitle: 'Citizen Compalaint Portal',
     formSubtitle: 'Our AI will automatically identify the type of defect from your photo.',
     photoLabel: 'Geotagged Photo',
     photoPlaceholder: 'Tap to take or upload a photo',
@@ -117,7 +117,7 @@ export const citizenTranslations = {
     step3Title: 'டாஷ்போர்டில் காட்டப்படுகிறது',
     step3Description:
       'உங்கள் புகார் நகராட்சி டாஷ்போர்டில் நேரடியாக தோன்றும், பழுதுபார்ப்பு குழுக்களுக்கு உடனடியாக தெரியும்.',
-    formTitle: 'புகார் விவரங்கள்',
+    formTitle: 'பொதுமக்கள் புகார் இணையதளம்',
     formSubtitle: 'உங்கள் புகைப்படத்திலிருந்து AI தானாக குறைபாட்டு வகையை அடையாளம் காணும்.',
     photoLabel: 'இட குறியிடப்பட்ட புகைப்படம்',
     photoPlaceholder: 'புகைப்படம் எடுக்க அல்லது பதிவேற்ற தட்டவும்',
@@ -185,7 +185,7 @@ export const citizenTranslations = {
     step3Title: 'डैशबोर्ड पर प्रदर्शित',
     step3Description:
       'आपकी रिपोर्ट नगरपालिका RoadWatch डैशबोर्ड पर लाइव दिखाई देती है, जो मरम्मत टीमों को तुरंत दिखाई देती है।',
-    formTitle: 'शिकायत विवरण',
+    formTitle: 'नागरिक शिकायत पोर्टल',
     formSubtitle: 'हमारा AI आपकी फोटो से दोष के प्रकार की स्वतः पहचान करेगा।',
     photoLabel: 'जियोटैग की गई फोटो',
     photoPlaceholder: 'फोटो लेने या अपलोड करने के लिए टैप करें',

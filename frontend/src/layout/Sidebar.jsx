@@ -1,4 +1,4 @@
-import { useState } from 'react'; 
+import { useState, useEffect } from 'react'; 
 import { NavLink, Link, useNavigate } from 'react-router-dom';
 import { useAutoVoice } from '../context/AutoVoiceContext';
 import { useAuth } from '../context/AuthContext';
@@ -12,6 +12,14 @@ const NAV_ITEMS = [
 
 export default function Sidebar() {
   const [isHovered, setIsHovered] = useState(false);
+  const [showIntro, setShowIntro] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setShowIntro(false), 1000); // visible for 3 seconds
+    return () => clearTimeout(timer);
+  }, []);
+
+  const isVisible = isHovered || showIntro;
 
   return (
     <>
@@ -36,20 +44,20 @@ export default function Sidebar() {
           top: 0,
           left: 0,
           right: 0,
-          height: 64,
+          height: 90,
           background: 'var(--color-sidebar-bg)',
-          transform: isHovered ? 'translateY(0)' : 'translateY(-100%)',
+          transform: isVisible ? 'translateY(0)' : 'translateY(-100%)',
           transition: 'transform 0.25s ease',
           zIndex: 2001,
           display: 'flex',
           alignItems: 'center',
-          gap: 32,
-          padding: '0 24px'
+          gap: 40,
+          padding: '0 32px'
         }}
       >
         <Link to="/" style={{ display: 'block' }}>
-          <div style={{ color: '#fff', fontWeight: 700, fontSize: 20, lineHeight: 1.1 }}>HelioWatch</div>
-          <div style={{ color: 'var(--color-sidebar-text)', fontSize: 10, letterSpacing: 0.5 }}>
+          <div style={{ color: '#fff', fontWeight: 700, fontSize: 26, lineHeight: 1.1 }}>HelioWatch</div>
+          <div style={{ color: 'var(--color-sidebar-text)', fontSize: 12, letterSpacing: 0.5 }}>
             FLEET DEFECT MONITOR
           </div>
         </Link>
@@ -61,9 +69,9 @@ export default function Sidebar() {
               to={item.to}
               style={({ isActive }) => ({
                 display: 'block',
-                padding: '8px 14px',
+                padding: '12px 20px',
                 borderRadius: 8,
-                fontSize: 15,
+                fontSize: 17,
                 fontWeight: 500,
                 color: isActive ? 'var(--color-sidebar-text-active)' : 'var(--color-sidebar-text)',
                 background: isActive ? 'rgba(255,255,255,0.08)' : 'transparent'
